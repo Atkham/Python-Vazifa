@@ -1,16 +1,9 @@
-words = ['тест', 'тажриба', 'киприк', 'кўплик', 'кўприк', 'кўркли',
-'кўрлик', 'пирлик', 'ўкирик', 'қирлик', 'кирпи', 'кўлик',
-'кўпик', 'кўрик', 'лирик', 'лўкки', 'пилик', 'пиқир', 'ўрлик',
-'қирпи', 'икки', 'илик', 'илиқ', 'клип', 'кўрк', 'пирқ',
-'ўкил', 'ўлик', 'ўрик', 'ўқли', 'қилкўприк', 'илли',
-'лол', 'лот', 'лото', 'о', 'ол', 'олло', 'от', 'то', 'тол', 'тот']
-
 def findMatches(word, words):
     matches = []
     yes = True
     wd = set(word)
     for w in words:
-        if set(w).issubset(wd):
+        if set(w).issubset(wd) and w != word:
             for i in wd:
                 if w.count(i) > word.count(i):
                     yes = False
@@ -18,7 +11,4 @@ def findMatches(word, words):
             if yes:
                 matches.append(w)
             yes = True
-    print(matches)
-
-findMatches('қилкўприк', words)
-findMatches('cтол', words)
+    return matches
