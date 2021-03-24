@@ -8,7 +8,6 @@ def findMatches(word, words):
                 if w.count(i) > word.count(i):
                     yes = False
                     break
-            if yes:
-                matches.append(w)
-            yes = True
+            if yes: matches.append(w)
+            else: yes = True
     return matches
