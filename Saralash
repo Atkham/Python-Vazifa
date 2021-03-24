@@ -8,7 +8,7 @@ def findMatches(word, words):
     matches = []
     yes = True
     for w in words:
-        for i in w:
+        for i in set(w):
             if i not in word:
                 yes = False
                 break
