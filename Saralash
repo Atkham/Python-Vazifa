@@ -18,3 +18,12 @@ def findMatches(word, words):
     print(matches)
 
 findMatches('қилкўприк', words)
+
+#Biroz soddalashdi.
+#def findMatches(word, words):
+#    matches = []
+#    word = set(word)
+#    for w in words:
+#        if set(w).issubset(word):
+#            matches.append(w)
+#    print(matches)
